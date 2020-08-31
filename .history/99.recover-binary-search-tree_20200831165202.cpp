@@ -91,6 +91,7 @@ public:
         else
         {
             swap(swapNode1->left->val, swapNode2->right->val);
+            printf("%d",swapNode2->left->val);
         }
     }
     void createTree(TreeNode* root, TreeNode* swapNode1, TreeNode* swapNode2){
@@ -107,10 +108,6 @@ public:
             if (!modifyRightTree(root, swapNode1, swapNode2))
             {
                 createTree(root->left, swapNode1, swapNode2);
-            }
-            else
-            {
-                return;
             }
         }
         createTree(root->right, swapNode1, swapNode2);

@@ -101,6 +101,7 @@ public:
         if (root->left == NULL)
         {
             swapNode(root, swapNode1, swapNode2);
+            printf("%d",root->val);
         }
         else
         {
@@ -108,12 +109,10 @@ public:
             {
                 createTree(root->left, swapNode1, swapNode2);
             }
-            else
-            {
-                return;
-            }
         }
+        printf("enter %dright\n",root->val);
         createTree(root->right, swapNode1, swapNode2);
+        printf("enter %dright over\n",root->val);
     }
     bool modifyRightTree(TreeNode* root, TreeNode* swapNode1, TreeNode* swapNode2){
         TreeNode* tem = root->left;
@@ -122,6 +121,7 @@ public:
             if (tem->right->val == root->val)
             {
                 swapNode(root, swapNode1, swapNode2);
+                printf("M%d",root->val);
                 tem->right = NULL;
                 return true;
             }

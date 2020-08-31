@@ -108,10 +108,6 @@ public:
             {
                 createTree(root->left, swapNode1, swapNode2);
             }
-            else
-            {
-                return;
-            }
         }
         createTree(root->right, swapNode1, swapNode2);
     }
