@@ -8,15 +8,8 @@
 class Solution {
 public:
     int numDistinct(string s, string t) {
-        if (s.empty()||t.empty())
-        {
-            return 0;
-        }
-        
-        vector<long> c((int)s.size()+1);
-        vector<vector<long>> dp((int)t.size()+1, c);
-        vector<long> cc((int)s.size()+1,1);
-        dp[0].assign(cc.begin(), cc.end());
+        vector<int> c((int)s.size()+1);
+        vector<vector<int>> dp((int)t.size()+1, c);
         for (int i = 1; i < (int)t.size()+1; i++)
         {
             for (int j = 1; j < (int)s.size()+1; j++)
@@ -29,6 +22,7 @@ public:
                 {
                     dp[i][j] = dp[i][j-1];
                 }
+                
             }
         }
         return dp[(int)t.size()][(int)s.size()];
