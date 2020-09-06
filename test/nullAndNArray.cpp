@@ -2,6 +2,7 @@
 #include<cstring>
 #include<algorithm>
 #include<iostream>
+#include <sstream>
 #include<string>
 #include<vector>
 #include<stack>
@@ -19,15 +20,14 @@ const double PI = acos(-1.0);
 int a;
 
 int main() {
-    int val=0;
-    while (scanf("%d",&val) != EOF)//未知N数组
-    {
-        vector<int> arr(val);
-        for(int i=0;i<val;++i)
-        {
-            scanf("%d",&arr[i]);
-        }
-        printf("%d",arr[0]);
+    string input;
+    while(getline(cin,input)){
+        istringstream iss(input);
+        vector<int> arr;
+        int val;
+        while(iss >> val)
+            arr.push_back(val);
+        cout<<arr[0]<<endl;
     }
     system("pause");
 }

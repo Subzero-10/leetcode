@@ -22,7 +22,7 @@ public:
                 right[len-i-1] = right[len-i]+1;
             }
         }
-        for (int i = 0; i < len; i++)
+        for (int i = 1; i < len; i++)
         {
             sum += max(left[i],right[i]);
         }

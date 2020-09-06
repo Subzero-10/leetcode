@@ -20,11 +20,11 @@ int a;
 
 int main() {
     int val=0;
-    cin>>val;//先输入一个数字表示数组大小
+    scanf("%d",&val);//先输入一个数字表示数组大小
     vector<int> arr(val);
     for(int i=0;i<val;++i)
     {
-        cin>>arr[i];
+        scanf("%d",&arr[i]);
     }
     printf("%d",arr[1]);
     system("pause");

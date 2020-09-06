@@ -2,7 +2,6 @@
 #include<cstring>
 #include<algorithm>
 #include<iostream>
-#include<sstream>
 #include<string>
 #include<vector>
 #include<stack>
@@ -21,15 +20,12 @@ int a;
 
 int main() {
     int val=0;
-    cin>>val;//先输入一个数字表示数组大小
-    cin.ignore();
-    vector<string> arr(val);
-    string s;
+    scanf("%d",&val);//先输入一个数字表示数组大小
+    vector<int> arr(val);
     for(int i=0;i<val;++i)
     {
-        getline(cin, s);
-        arr[i] = s;
+        scanf("%d",&arr[i]);
     }
-    printf("%s", arr[0].c_str());//输出
+    printf("%d",arr[1]);
     system("pause");
 }
