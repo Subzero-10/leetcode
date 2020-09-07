@@ -4,6 +4,7 @@
         "ios": "cpp",
         "xiosbase": "cpp",
         "queue": "cpp",
-        "stack": "cpp"
+        "stack": "cpp",
+        "map": "cpp"
     }
 }
