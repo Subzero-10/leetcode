@@ -68,8 +68,6 @@ public:
             head3 = head3->next;
         }
         Node* head4;
-        head4 = root;
-        printf("%d", head4->val);
         return root;
     }
 };
