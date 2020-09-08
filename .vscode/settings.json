@@ -5,6 +5,8 @@
         "xiosbase": "cpp",
         "queue": "cpp",
         "stack": "cpp",
-        "map": "cpp"
+        "map": "cpp",
+        "xstring": "cpp",
+        "utility": "cpp"
     }
 }
