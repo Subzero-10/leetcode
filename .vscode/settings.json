@@ -5,8 +5,10 @@
         "xiosbase": "cpp",
         "queue": "cpp",
         "stack": "cpp",
+        "iostream": "cpp",
+        "cmath": "cpp",
         "map": "cpp",
-        "xstring": "cpp",
-        "utility": "cpp"
+        "algorithm": "cpp",
+        "xstddef": "cpp"
     }
 }
