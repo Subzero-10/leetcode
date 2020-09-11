@@ -42,7 +42,7 @@ void getNext(string p, vector<int>& next)
 	next[0] = -1;
 	int i = 0, j = -1;
 
-	while (i < p.size()-1)
+	while (i < p.size())
 	{
 		if (j == -1 || p[i] == p[j])
 		{
@@ -80,7 +80,7 @@ void getnext(string str, vector<int>& next)
 {
     int i = 0,k=-1;
     next[0] = -1;
-    while(i<(int)str.size()-1)
+    while(i<(int)str.size())
     {
         if(k== -1 || str[i] == str[k])
         {

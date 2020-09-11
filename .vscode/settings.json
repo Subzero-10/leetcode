@@ -9,6 +9,9 @@
         "cmath": "cpp",
         "map": "cpp",
         "algorithm": "cpp",
-        "xstddef": "cpp"
+        "xstddef": "cpp",
+        "string": "cpp",
+        "xutility": "cpp",
+        "xstring": "cpp"
     }
 }

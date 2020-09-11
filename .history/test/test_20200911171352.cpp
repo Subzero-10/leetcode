@@ -16,71 +16,14 @@
 using namespace std;
 typedef long long ll;
 const double PI = acos(-1.0);
-
-int KMP(string t, string p, vector<int>& next) 
-{
-	int i = 0; 
-	int j = 0;
-
-	while (i < t.size() && j < p.size())
-	{
-		if (j == -1 || t[i] == p[j]) 
-		{
-			i++;
-            j++;
-		}
-        else 
-            j = next[j];
-    }
-    if (j == p.size())
-        return i - j;//找到p在t的位置
-    else 
-        return -1;
-}
-void getNext(string p, vector<int>& next)
-{
-	next[0] = -1;
-	int i = 0, j = -1;
-
-	while (i < p.size()-1)
-	{
-		if (j == -1 || p[i] == p[j])
-		{
-			++i;
-			++j;
-			next[i] = j;
-		}	
-		else
-			j = next[j];
-	}
-}
-
-int main() {
-    int val=0;
-    cin>>val;//先输入一个数字表示数组个数
-    cin.ignore();
-    vector<string> arr(val);
-    string s;
-    for(int i=0;i<val;++i)
-    {
-        getline(cin, s);
-        arr[i] = s;
-    }
-    vector<int> next(arr[1].size());
-    getNext(arr[1], next);
-    int a;
-    a = KMP(arr[0], arr[1], next);
-    printf("%d",a);
-    system("pause");
-}
+int a;
 
 
-/*多个
 void getnext(string str, vector<int>& next)
 {
     int i = 0,k=-1;
     next[0] = -1;
-    while(i<(int)str.size()-1)
+    while(i<(int)str.size())
     {
         if(k== -1 || str[i] == str[k])
         {
@@ -115,4 +58,31 @@ int KMP(string s, string t, vector<int>& next)
     }
     return ans;
 }
-*/
+
+int main() {
+    int n=0;
+    cin>>n;//n长
+    int m=0;
+    cin>>m;//m行
+    cin.ignore();
+    string str1;
+    getline(cin, str1);
+    vector<string> arr(m);
+    string str;
+    int sum = 0;
+    for(int i=0;i<m;++i)
+    {
+        getline(cin, str);
+        arr[i] = str;
+    }
+    //vector<int> next(10);
+    for (int i = 0; i < m; i++)
+    {
+        vector<int> next((int)arr[i].size());
+        getnext(arr[i],next);
+        sum += KMP(arr[i],str1,next);
+        printf("?");
+    }
+    printf("%d",sum);
+    system("pause");
+}
