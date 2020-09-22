@@ -43,7 +43,7 @@
  * 
  */
 
-// @lc code=starth>
+// @lc code=start
 class Solution {
 public:
     int helper(int step, int n, vector<vector<int>>& b){
@@ -51,7 +51,7 @@ public:
         for(int j = 0; j<n; j++){
             bool canPut = true;
             for(int k = 0; k< b.size(); k++){
-                if(j == b[k][1] || abs(step-b[k][0]) == abs(j-b[k][1]))
+                if(j == b[k][1] || abs(step-b[k][0] == abs(j-b[k][1])))
                 {
                     canPut = false;
                 }
@@ -70,7 +70,7 @@ public:
         }
         return sum;
     }
-    int totalNQueens(int n) {
+    int Nqueen(int n) {
         vector<vector<int>> b;
         int sum = 0;
         sum += helper(0, n, b);

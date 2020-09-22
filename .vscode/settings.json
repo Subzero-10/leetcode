@@ -12,6 +12,11 @@
         "xstddef": "cpp",
         "string": "cpp",
         "xutility": "cpp",
-        "xstring": "cpp"
+        "xstring": "cpp",
+        "deque": "cpp",
+        "initializer_list": "cpp",
+        "list": "cpp",
+        "xtree": "cpp",
+        "utility": "cpp"
     }
 }

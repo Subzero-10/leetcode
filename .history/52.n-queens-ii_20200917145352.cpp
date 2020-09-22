@@ -70,7 +70,7 @@ public:
         }
         return sum;
     }
-    int totalNQueens(int n) {
+    int Nqueen(int n) {
         vector<vector<int>> b;
         int sum = 0;
         sum += helper(0, n, b);

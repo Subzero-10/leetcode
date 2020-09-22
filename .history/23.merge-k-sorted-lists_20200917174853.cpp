@@ -17,7 +17,7 @@ class Solution {
 public:
     ListNode* mergeKLists(vector<ListNode*>& lists) {
         priority_queue<pair<int, ListNode *>, vector<pair<int, ListNode *>>, greater<pair<int, ListNode *>> > q;
-        for(int i=0; i<(int)lists.size(); i++){
+        for(int i; i<(int)lists.size(); i++){
             if(lists[i]!=NULL){
                 q.push(pair<int, ListNode *>(lists[i]->val,lists[i]));
             }
