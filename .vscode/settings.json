@@ -17,6 +17,8 @@
         "initializer_list": "cpp",
         "list": "cpp",
         "xtree": "cpp",
-        "utility": "cpp"
+        "utility": "cpp",
+        "condition_variable": "cpp",
+        "mutex": "cpp"
     }
 }
