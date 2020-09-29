@@ -8,7 +8,7 @@
 class Solution {
 public:
     int findMin(vector<int>& nums) {
-        return helper(nums ,0 , (int)nums.size()-1);
+        return helper(nums,0 , (int)nums.size()-1);
     }
     int helper(vector<int>& nums,int left, int right){
         if (left == right)
@@ -19,7 +19,7 @@ public:
         {
             return nums[left];
         }
-        int mid = (left+right)/2;
+        int mid = (left+right)/2
         return min(helper(nums ,left, mid),helper(nums,mid+1 , right));
     }
 };
