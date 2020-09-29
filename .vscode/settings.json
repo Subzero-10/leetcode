@@ -26,6 +26,7 @@
         "iosfwd": "cpp",
         "ostream": "cpp",
         "limits": "cpp",
-        "type_traits": "cpp"
+        "type_traits": "cpp",
+        "xhash": "cpp"
     }
 }
