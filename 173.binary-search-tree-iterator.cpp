@@ -56,11 +56,12 @@ public:
             }
         }
     }
-    TreeNode* firstnode;
+    TreeNode* firstnode = NULL;
     /** @return the next smallest number */
     int next() {
         int a = firstnode->val;
         TreeNode* tem = firstnode->right;
+        TreeNode* tem2 = firstnode;
         bool isfind = false;
         while (tem&&tem->left)
         {
@@ -75,11 +76,31 @@ public:
         if (!isfind)
         {
             firstnode = firstnode->right;
-            while (firstnode&&firstnode->left)
+            if (firstnode&&firstnode->left)
             {
+                TreeNode* tem3 = firstnode;
+                bool isagain = false;
                 firstnode = firstnode->left;
+                while (firstnode->right&&firstnode->right != tem3)
+                {
+                    firstnode = firstnode->right;
+                    if (firstnode == tem2)
+                    {
+                        isagain = true;
+                        break;
+                    }
+                }
+                firstnode = tem2->right;
+                if (!isagain)
+                {
+                    while (firstnode&&firstnode->left)
+                    {
+                        firstnode = firstnode->left;
+                    }
+                }
             }
         }
+
         return a;
     }
     
